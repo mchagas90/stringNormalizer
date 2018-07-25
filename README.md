@@ -12,5 +12,10 @@ npm install git+https://git@github.com/mchagas90/stringNormalizer.git#master
 
 ```bash
 var stringNormalizer = require('stringNormalizer');
-var a = stringNormalizer.execute("Grátis império");
+console.log(stringNormalizer.execute("Grátis império"));
+```
+
+```bash
+import { normalizer } from 'stringNormalizer';
+console.log(normalizer('império grátis'));
 ```
