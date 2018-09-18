@@ -1,11 +1,29 @@
 {
   "name": "stringNormalizer",
+  "description": "A simple and lightweight JS String normalizer",
+  "readmeFilename": "README.md",
+  "keywords": [
+    "string",
+    "normalizer",
+    "js"
+  ],
+  "tags": [
+    "js",
+    "normalizer"
+  ],
   "version": "1.0.0",
-  "description": "Adds string normalize support",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": {
+    "name": "Marcio Chagas",
+    "email": "marciosxagas@gmail.com",
+    "homepage": "https://github.com/mchagas90"
   },
-  "author": "Marcio Chagas <marciosxagas@gmail.com>",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mchagas90/stringNormalizer"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "main": "index.js"
 }

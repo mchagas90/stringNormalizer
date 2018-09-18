@@ -5,17 +5,12 @@
 ## Install
 
 ```bash
-npm install git+https://git@github.com/mchagas90/stringNormalizer.git#master
+npm install stringNormalizer
 ```
 
 ## Usage
 
 ```bash
-var stringNormalizer = require('stringNormalizer');
-console.log(stringNormalizer.execute("Grátis império"));
-```
-
-```bash
-import { normalizer } from 'stringNormalizer';
-console.log(normalizer('império grátis'));
+import { normalize } from 'stringNormalizer';
+console.log(normalize('império grátis'));  //"imperio gratis"
 ```
