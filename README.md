@@ -16,6 +16,6 @@ console.log(stringNormalizer.execute("Grátis império"));  //"gratis imperio"
 ```
 
 ```bash
-import { normalize } from 'stringNormalizer';
-console.log(normalize('império grátis'));  //"imperio gratis"
+import { normalizer } from 'stringNormalizer';
+console.log(normalizer('império grátis'));  //"imperio gratis"
 ```

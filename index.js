@@ -1,5 +1,5 @@
 exports.execute = function (string) {
-  return normalize(string);
+  return normalizer(string);
 }
 
 function custom_normalizer(string) {
