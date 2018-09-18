@@ -1,3 +1,7 @@
+exports.execute = function (string) {
+  return normalize(string);
+}
+
 function custom_normalizer(string) {
   // TODO: allow custom dictionary
   var accents = 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
@@ -14,7 +18,7 @@ function custom_normalizer(string) {
   return string.join('');
 }
 
-export function normalize(string) {
+const normalizer = function (string) {
   var string = string.toLowerCase();
   var converted_string = '';
 
@@ -32,3 +36,5 @@ export function normalize(string) {
 
   return converted_string;
 }
+
+module.exports = { normalizer: normalizer };
