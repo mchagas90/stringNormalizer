@@ -1,10 +1,10 @@
-exports.execute = function(string) {
-  return normalize(string);
+exports.execute = function (string) {
+  return normalizer(string);
 }
 
 function custom_normalizer(string) {
   // TODO: allow custom dictionary
-  var accents    = 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
+  var accents = 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
   var accentsOut = "AAAAAAaaaaaaOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz";
   string = string.split('');
   var stringLength = string.length;
@@ -18,17 +18,17 @@ function custom_normalizer(string) {
   return string.join('');
 }
 
-function normalize(string) {
+const normalizer = function (string) {
   var string = string.toLowerCase();
   var converted_string = '';
 
   try {
     converted_string = string.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  } catch(error) {
+  } catch (error) {
     console.log(error);
     try {
       converted_string = custom_normalizer(string);
-    } catch(error) {
+    } catch (error) {
       console.log(error);
       converted_string = string;
     }
@@ -36,3 +36,5 @@ function normalize(string) {
 
   return converted_string;
 }
+
+module.exports = { normalizer: normalizer };
