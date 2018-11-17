@@ -12,10 +12,11 @@ npm install git+https://git@github.com/mchagas90/stringNormalizer.git#master
 
 ```bash
 var stringNormalizer = require('stringNormalizer');
-console.log(stringNormalizer.execute("Grátis império"));
-```
 
-```bash
-import { normalizer } from 'stringNormalizer';
-console.log(normalizer('império grátis'));
+console.log(stringNormalizer("Grátis império"));
+-> "gratis imperio"
+
+# a custom dictionary may be used:
+console.log(stringNormalizer("Grátis império", {'é': 'e'}));
+-> "grátis imperio"
 ```
